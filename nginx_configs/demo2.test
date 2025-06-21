@@ -1,0 +1,20 @@
+server {
+	listen 82;
+	server_name localhost;
+
+	root /var/www/demo2.test;
+	index index.html index.htm index.php;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+	
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+	}
+
+	location ~ /\.ht {
+		deny all;
+	}
+}

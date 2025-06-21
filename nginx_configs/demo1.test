@@ -1,0 +1,11 @@
+server {
+	listen 81;
+	server_name localhost;
+	
+	root /var/www/demo1.test;
+	index index.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
