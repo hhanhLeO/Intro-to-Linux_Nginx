@@ -1,6 +1,6 @@
 server {
-	listen 82;
-	server_name localhost;
+	listen 80;
+	server_name demo2.test;
 
 	root /var/www/demo2.test;
 	index index.html index.htm index.php;

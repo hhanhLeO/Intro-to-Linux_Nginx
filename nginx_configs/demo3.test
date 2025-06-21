@@ -5,8 +5,8 @@ upstream backend_servers {
 }
 
 server {
-    listen 83;
-    server_name localhost;
+    listen 80;
+    server_name demo3.test;
 
     location / {
         proxy_pass http://backend_servers;
