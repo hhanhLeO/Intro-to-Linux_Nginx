@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello from FastAPI behind Nginx!"}
+    return {"message": "Hello from FastAPI Server 3 behind Nginx!"}
 
 @app.get("/api")
 def api():
